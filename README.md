@@ -1,8 +1,13 @@
-# TrivMonkey
+# Trivia Monkey
 A Windows Phone 8 Fun Trivia/Education Game. 
 Demonstrates the idea of deep theming for mobile applications (Changing theme throughout your Windows Phone app via xml.)
 
 
+Provided that you have the image in your repo, you can use a relative URL:
+
+![Alt text](https://raw.githubusercontent.com/victordibia/TrivMonkey/master/trivmonkey/Assets/triviamonkeyscreenshot.jpg "Optional Title")
+ 
+Written in C#
 
 #App Description.
 
@@ -23,3 +28,8 @@ Select a category of interest, answer questions. Correct questions earn you poin
 – Supports payment methods in multiple geographic locales.
 – offline mode
 
+# License
+
+Code in this repository is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT). Feel free to use it. Send an acknowledgement if it was useful, I'd like to hear from you!
+
+Victor Dibia.
