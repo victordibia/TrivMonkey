@@ -28,9 +28,9 @@ namespace TrivMonkey
         // Put your developer.interswitchng.com client id and secret key here
         // These credentials are only necessary if want your app to support Interswitch payment in West Africa.
         // https://connect.interswitchng.com/documentation/verve-payment-sdk-for-windows-phone-8/
-        private const string CLIENT_ID = "IKIAE948654DD9D680839BA555142D8F5556EB8738B1";  // Sample, replace with yours ; 
+        private const string CLIENT_ID = "";  // Sample, replace with yours ;
 
-        private const string CLIENT_SECRET = "azZ887h1ExywYqjs9IAyUhGaV+eU649FEV4Y477y1xQ="; // Sample, replace with yours;;
+        private const string CLIENT_SECRET = ""; // Sample, replace with yours;;
         private const string PAYMENT_CODE = "XXXXX";  // 5 numbers
 
         private static Popup my_popup_cs =  new Popup();
@@ -133,7 +133,7 @@ namespace TrivMonkey
 
                             Style style = (Style)Application.Current.Resources["OptionButtonStyle"];
 
-                            StackPanel skt_pnl_outter = new StackPanel();                             // stack panel 
+                            StackPanel skt_pnl_outter = new StackPanel();                             // stack panel
                             skt_pnl_outter.VerticalAlignment = VerticalAlignment.Center;
                             //skt_pnl_outter.Background = new SolidColorBrush(Colors.LightGray);
                             skt_pnl_outter.Orientation = System.Windows.Controls.Orientation.Vertical;
@@ -148,7 +148,7 @@ namespace TrivMonkey
                             BitmapImage imgSourceR = new BitmapImage(uriR);
                             img_disclaimer.Source = imgSourceR;
 
-                            StackPanel skt_pnl_mage = new StackPanel();                             // stack panel 
+                            StackPanel skt_pnl_mage = new StackPanel();                             // stack panel
                             skt_pnl_mage.VerticalAlignment = VerticalAlignment.Center;
                             //skt_pnl_outter.Background = new SolidColorBrush(Colors.LightGray);
                             skt_pnl_mage.Orientation = System.Windows.Controls.Orientation.Horizontal;
@@ -186,7 +186,7 @@ namespace TrivMonkey
                             btn_continue.Margin = new Thickness(0, 0, 0, 15);
                             btn_continue.Click += new RoutedEventHandler(btn_verve_Click);
 
-                            // Button cancel                                     
+                            // Button cancel
                             btn_cancel.Content = "Paypal , Credit , Debit Card";
                             btn_cancel.Style = style;
                             btn_cancel.Height = 100;
@@ -269,7 +269,7 @@ namespace TrivMonkey
 
         private async Task paymentSelector(long amount, int coinamount, string provider)
         {
-           
+
             if (provider.Equals("verve"))
             {
                 PerformPaymentOperation(amount, coinamount);
@@ -353,14 +353,14 @@ namespace TrivMonkey
                    Microsoft.Phone.Net.NetworkInformation.NetworkInterfaceType.None);
 
                    if (NetworkInterface.GetIsNetworkAvailable())
-                   {  
+                   {
                         Deployment.Current.Dispatcher.BeginInvoke(() =>
                        {
                        loadinglabel.Text = "";
                        display_cspopup();
                        }
                        );
-                     
+
                    }
                    else
                    {
@@ -428,7 +428,7 @@ namespace TrivMonkey
             beforePayment(100 * 350, 1000);
         }
 
-        
+
         private void btntryagain_Click(object sender, RoutedEventArgs e)
         {
             stkafterpurchase.Opacity = 0;
