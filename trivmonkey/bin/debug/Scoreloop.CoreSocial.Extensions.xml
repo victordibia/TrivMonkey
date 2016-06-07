@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Scoreloop.CoreSocial.Extensions</name>
+  </assembly>
+  <members>
+    <member name="T:Scoreloop.CoreSocial.API.WebBrowserExtensions.WindowsWebBrowser">
+      <summary>
+            Wrapper class for standard WebBrowser control.
+            </summary>
+    </member>
+    <member name="M:Scoreloop.CoreSocial.API.WebBrowserExtensions.WindowsWebBrowser.#ctor(System.Object)">
+      <summary>
+            Hidden constructor.
+            </summary>
+    </member>
+    <member name="M:Scoreloop.CoreSocial.API.WebBrowserExtensions.WindowsWebBrowser.IsValid(System.Object)">
+      <summary>
+            Verifies if given object is a WebBrowser control.
+            </summary>
+    </member>
+    <member name="M:Scoreloop.CoreSocial.API.WebBrowserExtensions.WindowsWebBrowser.NavigateTo(System.String)">
+      <summary>
+            Requests navigation to given URL.
+            Different threads might try to call it, so internally it should switch to UI-thread if required.
+            </summary>
+    </member>
+    <member name="E:Scoreloop.CoreSocial.API.WebBrowserExtensions.WindowsWebBrowser.Navigated">
+      <summary>
+            Event fired each time web browser navigated to any page (especially the one requested by call to Navigate() method).
+            </summary>
+    </member>
+    <member name="P:Scoreloop.CoreSocial.API.WebBrowserExtensions.WindowsWebBrowser.Object">
+      <summary>
+            Native web control object. This value is returned by the social providers related Scoreloop API.
+            </summary>
+    </member>
+  </members>
+</doc>

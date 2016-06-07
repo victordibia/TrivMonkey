@@ -1,0 +1,177 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TrivMonkey.BuyPage"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+
+        <!-- Animates the rectangle's opacity. -->
+        <Storyboard x:Name="myStoryboard">
+            <DoubleAnimation
+            Storyboard.TargetName="stkafterpurchase"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1"
+            /> 
+        </Storyboard>
+        <Storyboard x:Name="stkStoryboard">
+            <DoubleAnimation
+            Storyboard.TargetName="stckbeforepurchase"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1"
+            />
+        </Storyboard>
+
+
+
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
+        </Grid.Background>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel  Margin="0,0,0,10"  VerticalAlignment="Top"  >
+            <StackPanel >
+                <Grid Margin="12, 0,0,0"  VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+                    <StackPanel  HorizontalAlignment="Stretch"  >
+                        <TextBlock Style="{StaticResource PhoneTextTitle1Style}" Foreground="White"  HorizontalAlignment="Left"  TextAlignment="Left" x:Name="txt_title" TextWrapping="Wrap" Text="Buy KOINS"  Margin=" 10 " Padding=" 0" />
+                    </StackPanel>
+                </Grid >
+            </StackPanel>
+            <StackPanel  >
+                <StackPanel  Margin="12" >
+                    <Grid VerticalAlignment="Top" Background="{StaticResource yellowrange}"  Height=" 48">
+                        <TextBlock x:Name="lbltitle"  Margin="12,12,12,12" Text="BUY MONKEY KOINS"  Foreground="White" FontSize="18" />
+
+                        <StackPanel HorizontalAlignment="Right"  Height="48" VerticalAlignment="Top" Width="100" Background="#FF3E3D3D">
+                            <TextBlock x:Name="lblitems"  Margin="12,12,12,12" Text=""  Foreground="White" FontSize="18" />
+                        </StackPanel>
+
+                    </Grid>
+                    <StackPanel   >
+                        <StackPanel.Background >
+                            <SolidColorBrush Color="Black" Opacity="0.9"/>
+                        </StackPanel.Background>
+                         
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" Background="Black"  >
+                        <StackPanel Visibility="Visible"   x:Name="stckbeforepurchase" >
+                        <TextBlock x:Name="statlabel" Foreground="White" Text="Select a MONKEY KOIN pack below and pay using either VERVE cards or other payment methods such as Credit Cards, Microsoft Gift Cards and PayPal." TextWrapping="Wrap" Margin="10" />
+                            <TextBlock x:Name="loadinglabel" Foreground="White" Text="" TextWrapping="Wrap" Margin="5" />
+
+                            <Grid   Height="450"  VerticalAlignment="Stretch"  Background="Black" >
+                                                       
+                            <ScrollViewer VerticalAlignment="Bottom"  Margin="0 0 0 10" >
+                                
+                                
+                                <StackPanel >
+                                    <Grid HorizontalAlignment="Stretch" Margin="0,10,0,0" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition  />
+                                            <ColumnDefinition  />
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <Button Style="{StaticResource CustomButtonStyle}" Background="{StaticResource yellowrange}"    Margin="0,5,10,5" Click="Button_Click_1" Height="200">
+                                            <StackPanel VerticalAlignment="Center"  >
+                                                <TextBlock Foreground="White"  FontSize=" 34" FontWeight="Bold"  TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="50 MK"/>
+                                                <TextBlock Foreground="White"  FontSize=" 14" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="50 MONKEY KOINS"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="1" Style="{StaticResource CustomButtonStyle}" Background="{StaticResource yellowrange}"  Height="200"  Margin="0,5,0,5" Click="Button_Click_2">
+                                            <StackPanel VerticalAlignment="Center"  >
+                                                <TextBlock Foreground="White" FontSize=" 34" FontWeight="Bold"  TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="100 MK"/>
+                                                <TextBlock Foreground="White" FontSize=" 14" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="100 MONKEY KOINS"/>
+                                            </StackPanel>
+                                        </Button>
+
+                                        <Button Style="{StaticResource CustomButtonStyle}" Grid.Row="1" Grid.Column ="0" Background="{StaticResource yellowrange}"  Height="200"   Margin="0,5,10,5" Click="Button_Click_3">
+                                            <StackPanel VerticalAlignment="Center"  >
+                                                <TextBlock Foreground="White" FontSize=" 34" FontWeight="Bold"  TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="500 MK"/>
+                                                <TextBlock Foreground="White" FontSize=" 14" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="500 MONKEY KOINS"/>
+                                            </StackPanel>
+                                        </Button>
+
+                                        <Button Style="{StaticResource CustomButtonStyle}"  Grid.Row="1"  Grid.Column ="1"  Background="{StaticResource yellowrange}"  Height="200"   Margin="0,5,0,5" Click="Button_Click_4">
+                                            <StackPanel VerticalAlignment="Center"  >
+                                                <TextBlock Foreground="White" FontSize=" 32" FontWeight="Bold"  TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="1000 MK"/>
+                                                <TextBlock Foreground="White" FontSize=" 14" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"  Text="1000 MONKEY KOINS"/>
+                                            </StackPanel>
+                                        </Button>
+                                         
+
+                                    </Grid>
+                                    
+
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                    </StackPanel>
+                        <StackPanel HorizontalAlignment="Left"   Height=" 570" Visibility="Collapsed"     Opacity="0" x:Name="stkafterpurchase">
+                            <TextBlock x:Name="lblfunny" Foreground="White"  Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" Margin=" 12" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Height=" 100" Width=" 100" Source="/img/coins.png"></Image>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom"  >
+                                    <TextBlock x:Name="newbalance" Foreground="{StaticResource yellowrange}" FontSize="60"  Text="50" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,0"></TextBlock>
+                                    <TextBlock  Foreground="White" FontSize="18" Style="{StaticResource PhoneTextSubtleStyle}" Text="NEW KOIN BALANCE" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,0,12,10"></TextBlock>
+                                </StackPanel>
+                               
+                            </StackPanel> 
+                            <TextBlock x:Name="lblmessage" Foreground="White" FontSize="20" Style="{StaticResource PhoneTextSubtleStyle}" Text="One moment ..." HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,0,12,20"></TextBlock>
+                            <Button  HorizontalAlignment="Left" Visibility="Collapsed"  x:Name="btntryagain" Padding="10" FontSize="18" Background="{StaticResource yellowrange}"  Style="{StaticResource CustomButtonStyle}"  Width="300" VerticalAlignment="Bottom"  Content="Try Again" Margin="10,0,0,0" Click="btntryagain_Click"/>
+                            <Button  HorizontalAlignment="Left" Foreground="White" Height="50" Visibility="Collapsed"  x:Name="btndone" Padding="10" FontSize="18" Background="{StaticResource yellowrange}"  Style="{StaticResource CustomButtonStyle}"  Width="300" VerticalAlignment="Bottom"  Content="Done" Margin="10,0,0,0" Click="btndone_Click"/>
+
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel >
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <!--ContentPanel - place additional content here-->
+
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

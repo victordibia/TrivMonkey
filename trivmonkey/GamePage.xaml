@@ -1,0 +1,203 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TrivMonkey.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+     
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0"   Height=" 140" Margin="0,0,0,10"  >
+            <StackPanel Margin="12"  VerticalAlignment="Top" Orientation="Horizontal" >
+                <StackPanel >
+                    <Grid>
+                        <Border
+                        BorderBrush="White" 
+                       BorderThickness="0"
+                        Background="#80808080">
+                       <Image x:Name="img_thumb3" Source="/img/holdere.jpg" Height=" 130"  Width="110" Stretch="UniformToFill" />
+
+                        </Border>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0" >
+                    <StackPanel HorizontalAlignment="Stretch" >
+                        <StackPanel HorizontalAlignment="Stretch"  >
+                            <StackPanel.Background >
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </StackPanel.Background>
+                            <TextBlock x:Name="txt_title" TextWrapping="Wrap" Text="Bingo" FontWeight="Bold" FontSize="24" Foreground="#FFF9F5F5" Width="337" Margin=" 10 " Padding=" 0" />
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal"   Margin="0,6,0,00 " >
+                            <StackPanel   >
+                                <StackPanel.Background >
+                                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                                </StackPanel.Background>
+                                <StackPanel Height=" 46"  Width="100" VerticalAlignment="Center"  HorizontalAlignment="Center" >
+                                    <TextBlock  Foreground="White"  x:Name="lbl_score" VerticalAlignment="Center"  HorizontalAlignment="Center" FontWeight="Bold" Margin=" 0,0,0,5" TextWrapping="Wrap" Text="0" FontSize="36"/>
+
+                                </StackPanel>
+                                <StackPanel  Width="100" HorizontalAlignment="Center" >
+                                    <TextBlock Foreground="White"  HorizontalAlignment="Center"  Margin=" 0,0,0,5" TextWrapping="Wrap" Text="SCORE" FontSize=" 14"/>
+
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" />
+                            </StackPanel>
+
+                            <StackPanel Margin="10,0,0,0"   >
+                                <StackPanel.Background >
+                                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                                </StackPanel.Background>
+                                <StackPanel Height="46" Width="100" Orientation="Horizontal" >
+                                    <Image x:Name="img_life1" Margin="5,10,0,5" HorizontalAlignment="Right" Width=" 30"  Height="30" Source="/img/missile.png"/>
+                                    <Image x:Name="img_life2" Margin="0,10,0,5" HorizontalAlignment="Right" Width=" 30"  Height="30" Source="/img/missile.png"/>
+                                    <Image x:Name="img_life3" Margin="0,10,0,5" HorizontalAlignment="Right" Width=" 30"  Height="30" Source="/img/missile.png"/>
+
+                                </StackPanel>
+                                <StackPanel  Width="100" HorizontalAlignment="Center" >
+                                    <TextBlock  Foreground="White"  HorizontalAlignment="Center"  Margin=" 0,0,0,5" TextWrapping="Wrap" Text="TRIES LEFT" FontSize=" 14"/>
+
+                                </StackPanel>
+                            </StackPanel>
+
+
+
+
+                        </StackPanel>
+
+
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid VerticalAlignment="Bottom"  x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,12"  >
+            <Grid.Background >
+                <SolidColorBrush Color="White"  Opacity="1"/>
+            </Grid.Background>
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <StackPanel    HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{StaticResource yellowrange}">
+                    <Grid >
+                        <TextBlock x:Name="lblquestiontitle"  Margin="12,12,12,12" Text="QUESTION"  Foreground="White" FontSize="18" />
+
+                        <StackPanel  HorizontalAlignment="Right"  Height="48" VerticalAlignment="Top" Width="100" Background="{StaticResource mydarkgrey}">
+                            <TextBlock x:Name="lbltime"  Margin="12,12,12,7" Text="60s Left"  Foreground="White" FontSize="18" />
+                            
+                        </StackPanel>
+
+                    </Grid>
+                    
+                   
+                </StackPanel>
+                <StackPanel x:Name="stacktimerholder" HorizontalAlignment="Stretch"  Background="{StaticResource mydarkgrey}"  >
+
+                    <StackPanel Background="White"   HorizontalAlignment="Left" x:Name="stktimeleftlabel"  Height="4" Width="0"></StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="0" Margin="12,12,12,12">
+                    <TextBlock x:Name="questionblock" MinHeight="90" TextWrapping="Wrap"   HorizontalAlignment="Stretch"  Text="Just a moment ... loading questions!"  Foreground="Black" FontSize="18" Margin="0,0,0,0" />
+                </StackPanel>
+                <ScrollViewer Margin="12,0,12,12">
+                    <Grid HorizontalAlignment="Stretch" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="108*"  />
+                        <ColumnDefinition Width="95*"  />
+                            <ColumnDefinition Width="13*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Border VerticalAlignment="Center"  Margin="0,5,8,5" MouseLeftButtonUp="RectA_MouseLeftButtonUp"
+                        x:Name="RectA"
+         Height="200" Background="{StaticResource yellowrange}" MouseLeftButtonDown="RectA_MouseLeftButtonDown"  >
+
+                            <TextBlock Foreground="White"  Margin="10" x:Name="txt_opta" VerticalAlignment="Center"  Text="A" TextWrapping="Wrap" TextAlignment="Center" Height="Auto" FontSize="18" FontWeight="Bold"/>
+
+                        </Border>
+
+                        <Border Grid.Column ="1" VerticalAlignment="Center"  Margin="3,5,0,5" MouseLeftButtonUp="RectB_MouseLeftButtonUp"
+                        x:Name="RectB"
+         Height="200" Background="{StaticResource yellowrange}" MouseLeftButtonDown="RectB_MouseLeftButtonDown" Grid.ColumnSpan="2"  >
+
+                            <TextBlock Foreground="White"  Margin="10" x:Name="txt_optb" VerticalAlignment="Center"  Text="B" TextWrapping="Wrap" TextAlignment="Center" Height="Auto" FontSize="18" FontWeight="Bold"/>
+
+                        </Border>
+
+                        <Border  Grid.Row="1" VerticalAlignment="Center"  Margin="0,6,8,5" MouseLeftButtonUp="RectC_MouseLeftButtonUp"
+                        x:Name="RectC"
+         Height="200" Background="{StaticResource yellowrange}" MouseLeftButtonDown="RectC_MouseLeftButtonDown"  >
+
+                            <TextBlock Foreground="White"  Margin="10" x:Name="txt_optc" VerticalAlignment="Center"  Text="C" TextWrapping="Wrap" TextAlignment="Center" Height="Auto" FontSize="18" FontWeight="Bold"/>
+
+                        </Border>
+
+                        <Border   Grid.Row="1" Grid.Column ="1" VerticalAlignment="Center"  Margin="3,6,0,5" MouseLeftButtonUp="RectD_MouseLeftButtonUp"
+                        x:Name="RectD"
+         Height="200" Background="{StaticResource yellowrange}" MouseLeftButtonDown="RectD_MouseLeftButtonDown" Grid.ColumnSpan="2"  >
+
+                            <TextBlock Foreground="White"  Margin="10" x:Name="txt_optd" VerticalAlignment="Center"  Text="D" TextWrapping="Wrap" TextAlignment="Center" Height="Auto" FontSize="18" FontWeight="Bold"/>
+
+                        </Border>
+
+                         
+                         
+                    
+                    
+                </Grid>
+</ScrollViewer> 
+                <StackPanel Grid.Row="0" >
+
+                </StackPanel>
+            </StackPanel>
+
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

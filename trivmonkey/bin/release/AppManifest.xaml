@@ -1,0 +1,15 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Trivia Monkey" EntryPointType="TrivMonkey.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Trivia Monkey" Source="Trivia Monkey.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+    <AssemblyPart x:Name="Quickteller.Sdk.Wp8" Source="Quickteller.Sdk.Wp8.dll" />
+    <AssemblyPart x:Name="Scoreloop.CoreSocial" Source="Scoreloop.CoreSocial.dll" />
+    <AssemblyPart x:Name="Scoreloop.CoreSocial.Extensions" Source="Scoreloop.CoreSocial.Extensions.dll" />
+    <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Extensions" Source="System.Net.Http.Extensions.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Primitives" Source="System.Net.Http.Primitives.dll" />
+    <AssemblyPart x:Name="WP8BouncyCastle" Source="WP8BouncyCastle.dll" />
+  </Deployment.Parts>
+</Deployment>

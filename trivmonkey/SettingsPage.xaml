@@ -1,0 +1,104 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TrivMonkey.SettingsPage"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
+        </Grid.Background>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel  Margin="0,0,0,10"  VerticalAlignment="Top"  >
+            <StackPanel >
+                <Grid  Margin="12, 0,0,0"  VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+                    <StackPanel  HorizontalAlignment="Stretch"  >
+                        <TextBlock Style="{StaticResource PhoneTextTitle1Style}" Foreground="White"  HorizontalAlignment="Left"  TextAlignment="Left" x:Name="txt_title" TextWrapping="Wrap" Text="Settings"  Margin=" 10 " Padding=" 0" />
+                    </StackPanel>
+                </Grid >
+            </StackPanel>
+            <StackPanel  >
+                <StackPanel  Margin="12" >
+                    <Grid VerticalAlignment="Top" Background="{StaticResource yellowrange}"  Height=" 48">
+                        <TextBlock x:Name="lbltitle"  Margin="12,12,12,12" Text="SETTINGS"  Foreground="White" FontSize="18" />
+
+                        <StackPanel HorizontalAlignment="Right"  Height="48" VerticalAlignment="Top" Width="100" Background="#FF3E3D3D">
+                            <TextBlock x:Name="lblitems"  Margin="12,12,12,12" Text=""  Foreground="White" FontSize="18" />
+                        </StackPanel>
+
+                    </Grid>
+                    <StackPanel   >
+                        <StackPanel.Background >
+                            <SolidColorBrush Color="Black" Opacity="0.9"/>
+                        </StackPanel.Background>
+
+                    </StackPanel>
+                    <ScrollViewer >
+                        <StackPanel  >
+                            <Grid   Height=" 620"  VerticalAlignment="Stretch"  Background="Black" >
+                                <ScrollViewer >
+                                    <StackPanel >
+                                        <TextBlock Foreground="White" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"  Text="THEME" Margin=" 12" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"></TextBlock>
+                                        <ScrollViewer Width="430" Margin="-8,0,0,0" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" >
+                                            <StackPanel x:Name="themestack"  Orientation="Horizontal" ></StackPanel>                                               
+                                        </ScrollViewer>
+                                            <TextBlock  Foreground="White" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"  Text="SOUND VIBES &amp; LOCATION" Margin=" 12" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"></TextBlock>
+                                        <toolkit:ToggleSwitch  Style="{StaticResource FixedToggleSwitchStyle}" x:Name="togglesound" SwitchForeground ="{StaticResource yellowrange}" Content="Sound is on" IsChecked="True"  Header="Toggle game sounds." Checked="togglesound_Checked" Click="togglesound_Click" Unchecked="togglesound_Unchecked" Margin="0,0,5,0"/>
+                                        <toolkit:ToggleSwitch Style="{StaticResource FixedToggleSwitchStyle}" x:Name="togglevibration" SwitchForeground ="{StaticResource yellowrange}" Content="Vibration is on" IsChecked="True"  Header="Toggle game vibrations" Unchecked="togglevibration_Unchecked" Checked="togglevibration_Checked" Margin="0,0,5,0"/>
+                                        <TextBlock Visibility="Collapsed"  Foreground="White" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"  Text="LOCATION" Margin=" 12" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"></TextBlock>
+                                         <toolkit:ToggleSwitch Style="{StaticResource FixedToggleSwitchStyle}" x:Name="togglelivetile" SwitchForeground ="{StaticResource yellowrange}" Content="Live Tile is Off" IsChecked="False"  Header="Toggle Live Tiles" Unchecked="togglelivetile_Unchecked" Checked="togglelivetile_Checked" Margin="0,0,5,0"/>
+<toolkit:ToggleSwitch Style="{StaticResource FixedToggleSwitchStyle}" x:Name="togglelocation" SwitchForeground ="{StaticResource yellowrange}" Content="Location is on" IsChecked="True"  Header="Toggle location data" Checked="togglelocation_Checked" Unchecked="togglelocation_Unchecked" Margin="0,0,5,0"/>
+                                       
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </StackPanel >
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <!--ContentPanel - place additional content here-->
+
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

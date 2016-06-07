@@ -1,0 +1,194 @@
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\ApplicationIcon.png
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\IconicTileSmall.png
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\img\darkbulb.jpg
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.dll.config
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.pdb
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\AppManifest.xaml
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Properties\WMAppManifest.xml
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\TrivMonkey_Release_AnyCPU.xap
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Microsoft.Phone.Controls.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Newtonsoft.Json.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Newtonsoft.Json.xml
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\App.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\CategoryPage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\HowtoPage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\CreditsPage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\SettingsPage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\GamePage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\MainPage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\GameOverPage.g.cs
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.g.resources
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.Resources.AppResources.resources
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.csproj.GenerateResource.Cache
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.dll
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.pdb
+E:\DropBox\workspace\TrivMonkey\TrivMonkey\obj\Release\XapCacheFile.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.csprojResolveAssemblyReference.cache
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\App.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\CategoryPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\BuyPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\LeaderBoardPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\PaymentCompletePage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\HowtoPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\CreditsPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\SettingsPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\GamePage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\MainPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\GameOverPage.g.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.g.resources
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.Resources.AppResources.resources
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.csproj.GenerateResource.Cache
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\ApplicationIcon.png
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\IconicTileSmall.png
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\img\darkbulb.jpg
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ProfileImage.cs
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.dll.config
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.pdb
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\AppManifest.xaml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\TrivMonkey_Release_AnyCPU.xap
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Microsoft.Phone.Controls.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Newtonsoft.Json.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Quickteller.Sdk.Wp8.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.Extensions.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Extensions.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Primitives.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\WP8BouncyCastle.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Newtonsoft.Json.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.Extensions.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Extensions.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Primitives.xml
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\WP8BouncyCastle.pdb
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.dll
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.pdb
+C:\Users\Victor\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\XapCacheFile.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\ApplicationIcon.png
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Assets\Tiles\IconicTileSmall.png
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\img\darkbulb.jpg
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ProfileImage.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.dll.config
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Trivia Monkey.pdb
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\AppManifest.xaml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Properties\WMAppManifest.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\TrivMonkey_Release_AnyCPU.xap
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Microsoft.Phone.Controls.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Newtonsoft.Json.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Quickteller.Sdk.Wp8.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.Extensions.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Extensions.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Primitives.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\WP8BouncyCastle.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Newtonsoft.Json.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\Scoreloop.CoreSocial.Extensions.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Extensions.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\System.Net.Http.Primitives.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\WP8BouncyCastle.pdb
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\App.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\CategoryPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\BuyPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\LeaderBoardPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\PaymentCompletePage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\HowtoPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\CreditsPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\SettingsPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\GamePage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\MainPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\GameOverPage.g.cs
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.g.resources
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.Resources.AppResources.resources
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.csproj.GenerateResource.Cache
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.dll
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\Trivia Monkey.pdb
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\XapCacheFile.xml
+D:\Dropbox\workspace\TrivMonkey\TrivMonkey\obj\Release\TrivMonkey.csprojResolveAssemblyReference.cache

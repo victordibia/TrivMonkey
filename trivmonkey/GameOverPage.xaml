@@ -1,0 +1,196 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TrivMonkey.GameOverPage"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0"   Height=" 140" Margin="0,0,0,10"  >
+            <StackPanel Margin="12"  VerticalAlignment="Top" Orientation="Horizontal" >
+                <StackPanel >
+                    <Grid>
+                        <Border
+                        BorderBrush="{StaticResource PhoneForegroundBrush}"
+                       BorderThickness="0"
+                        Background="#80808080">
+                            <Image x:Name="img_thumb3" Source="/img/holdere.jpg" Height=" 132"  Width="110" Stretch="UniformToFill" />
+
+                        </Border>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0" >
+                    <StackPanel HorizontalAlignment="Stretch" >
+                        <StackPanel HorizontalAlignment="Stretch" >
+                            <StackPanel.Background >
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </StackPanel.Background>
+                            <TextBlock x:Name="txt_title" TextWrapping="Wrap" Text="Game Over" FontWeight="Bold" FontSize="24" Foreground="White"  Width="337" Margin=" 10 " Padding=" 0" />
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal"   Margin="0,6,0,00 " >
+                            <StackPanel   >
+                                <StackPanel.Background >
+                                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                                </StackPanel.Background>
+                                <StackPanel Height=" 46"  Width="100" VerticalAlignment="Center"  HorizontalAlignment="Center" >
+                                    <TextBlock Foreground="White"  x:Name="lbl_score" VerticalAlignment="Center"  HorizontalAlignment="Center" FontWeight="Bold" Margin=" 0,0,0,5" TextWrapping="Wrap" Text="0" FontSize="36"/>
+
+                                </StackPanel>
+                                <StackPanel  Width="100" HorizontalAlignment="Center" >
+                                    <TextBlock Foreground="White"  HorizontalAlignment="Center"  Margin=" 0,0,0,5" TextWrapping="Wrap" Text="SCORE" FontSize=" 14"/>
+
+                                </StackPanel>
+                            </StackPanel>
+
+                             
+
+
+
+
+                        </StackPanel>
+
+
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid Height="590" VerticalAlignment="Bottom"  x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,12" >
+            <Grid.Background >
+                <SolidColorBrush Color="White" Opacity="1"/>
+            </Grid.Background>
+            <StackPanel    HorizontalAlignment="Stretch" VerticalAlignment="Top"  >
+                <StackPanel    HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{StaticResource yellowrange}">
+                     
+                        <TextBlock x:Name="lblquestiontitle"  Margin="12,12,12,12" Text="GAME OVER"  Foreground="White" FontSize="18" />
+                
+                </StackPanel>
+               
+                <StackPanel  Margin=" 0,10,0,0"   HorizontalAlignment="Stretch" VerticalAlignment="Top" >
+
+                    <TextBlock x:Name="gameoverdesc"  Margin="12,12,12,12" Text="GAME OVER"  Foreground="Black"  FontSize="18" />
+
+                </StackPanel>
+
+                 
+
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                
+
+                <StackPanel Grid.Row="0" Margin="12,10,12,12"/>
+
+
+
+                <StackPanel VerticalAlignment="Bottom"  Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center"  Margin="12">
+                    <StackPanel Margin=" 20" Width="110"  >
+                        <StackPanel.Background >
+                            <SolidColorBrush Color="Black" Opacity="0.7"/>
+                        </StackPanel.Background>
+                        <StackPanel    VerticalAlignment="Center"  HorizontalAlignment="Center" >
+                             <Button x:Name="btnplayagain" Margin="0,10,0,0" Click="playbtnclick">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image  Height="60" Width="60" Stretch="Fill" Source="/img/play.png" Margin="10" />
+
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel    HorizontalAlignment="Center" >
+                            <TextBlock  Foreground="White"  HorizontalAlignment="Center"  Margin=" 10,0,10,10" TextWrapping="Wrap" Text="PLAY AGAIN" FontSize=" 16"/>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin=" 20" Width="110" >
+                        <StackPanel.Background >
+                            <SolidColorBrush Color="Black" Opacity="0.7"/>
+                        </StackPanel.Background>
+                        <StackPanel    VerticalAlignment="Center"  HorizontalAlignment="Center" >
+                            <Button x:Name="sharebtn"  Margin="0,10,0,0" Click="sharebtnclick">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image  Height="60" Width="60" Stretch="Fill" Source="/img/share.png" Margin="10" />
+
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel    HorizontalAlignment="Center" >
+                            <TextBlock Foreground="White"  HorizontalAlignment="Center"  Margin=" 10,0,10,10" TextWrapping="Wrap" Text="SHARE" FontSize=" 16"/>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin=" 20" Width="110" >
+                        <StackPanel.Background >
+                            <SolidColorBrush Color="Black" Opacity="0.7"/>
+                        </StackPanel.Background>
+                        <StackPanel    VerticalAlignment="Center"  HorizontalAlignment="Center" >
+                            <Button x:Name="backbtn" Margin="0,10,0,0" Click="menubtnclick">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image  Height="60" Width="60" Stretch="Fill" Source="/img/back.png" Margin="10" />
+
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel    HorizontalAlignment="Center" >
+                            <TextBlock Foreground="White"  HorizontalAlignment="Center"  Margin=" 10,0,10,10" TextWrapping="Wrap" Text=" MENU" FontSize=" 16"/>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

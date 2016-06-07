@@ -1,0 +1,317 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TrivMonkey.LeaderBoardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TrivMonkey"  
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+   mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <phone:PhoneApplicationPage.Resources>
+        <local:PlayTimeConverter x:Key="PlayTime"/>
+        <local:LockImage x:Key="LockImage"/>
+
+        <!-- Animates the rectangle's opacity. -->
+        <Storyboard x:Name="myStoryboard">
+            <DoubleAnimation
+            Storyboard.TargetName="lstScores"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1"
+            />
+        </Storyboard>
+        <Storyboard x:Name="myStoryboardLT">
+            <DoubleAnimation
+            Storyboard.TargetName="lstScoresLT"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1"
+            />
+        </Storyboard>
+        <Storyboard x:Name="myStoryboardKP">
+            <DoubleAnimation
+            Storyboard.TargetName="lstScoresKP"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1"
+            />
+        </Storyboard>
+        <Storyboard x:Name="rankStoryboard">
+            <DoubleAnimation
+            Storyboard.TargetName="gridrank"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1"
+            />
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <!-- LOCALIZATION NOTE:
+            To localize the displayed strings copy their values to appropriately named
+            keys in the app's neutral language resource file (AppResources.resx) then
+            replace the hard-coded text value between the attributes' quotation marks
+            with the binding clause whose path points to that string name.
+
+            For example:
+
+                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+
+            This binding points to the template's string resource named "ApplicationTitle".
+
+            Adding supported languages in the Project Properties tab will create a
+            new resx file per language that can carry the translated values of your
+            UI strings. The binding in these examples will cause the value of the
+            attributes to be drawn from the .resx file that matches the
+            CurrentUICulture of the app at run time.
+         -->
+
+        <!--Panorama control-->
+
+
+
+        <phone:Pivot    >
+            <phone:Pivot.Title >
+                <TextBlock Foreground="White"  Text="Leader board" Margin="0" />
+            </phone:Pivot.Title>
+            <phone:Pivot.Background>
+                <ImageBrush ImageSource="/img/darkbulb.jpg" Stretch="UniformToFill"/>
+            </phone:Pivot.Background>
+
+
+            <phone:PivotItem CacheMode="{x:Null}" >
+                <phone:PivotItem.Header>
+                    <TextBlock Foreground="White" Text="Profile"></TextBlock>
+                </phone:PivotItem.Header>
+                <Grid>
+                    <StackPanel >
+                        <TextBlock    Foreground="White"  Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}"  Text="PROFILE DETAILS" Margin=" 12" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"></TextBlock>
+                        <TextBlock Margin="12 0 0 0" Foreground="White" Opacity="0.8" Text="your rank"></TextBlock>
+                        <Grid x:Name="gridrank" Margin="0,0,0,10">
+                            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Stretch"  >
+                                <StackPanel Margin="12,0,10,0" VerticalAlignment="Center"  >
+                                    <Image Width="40" Height="40" Source="/img/trophy.png" Margin="0,10,0,0"></Image>
+                                    <TextBlock x:Name="txt_rankbadge" Foreground="White" HorizontalAlignment="Center" FontSize="14" Margin="0,0,0,5" />
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center"  HorizontalAlignment="Stretch" Orientation="Horizontal"   >
+                                    <TextBlock x:Name="txt_rank" Margin="12,0,20,10" Foreground="White"   Text="loading rank ..." FontSize="45"/>
+
+
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel   Orientation="Horizontal"  VerticalAlignment="Center"  HorizontalAlignment="Right" Margin="0,0,12,12"  >
+                                <TextBlock FontSize="40" x:Name="txt_points" Foreground="{StaticResource yellowrange}" VerticalAlignment="Bottom"  HorizontalAlignment="Right"  Text="0" Margin="0,0,4,0" RenderTransformOrigin="0.52,0.5"></TextBlock>
+                                <TextBlock Foreground="{StaticResource yellowrange}" VerticalAlignment="Bottom"  HorizontalAlignment="Right"  Text="pts" Margin="0,0,0,5"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock Margin="12 0 0 0" Foreground="White" Opacity="0.8" Text="display name"></TextBlock>
+                        <TextBox Style="{StaticResource CustomTextBoxStyle}" IsEnabled="False"   x:Name="txt_displayname" BorderBrush="White" Foreground="White" Height="77" TextWrapping="Wrap" Text="Player1" Width="456"  Background="{StaticResource yellowrange}" Padding="10 3 0 0"/>
+                        <TextBlock  Margin="12 0 0 0" Foreground="White" Opacity="0.8" Text="email address"></TextBlock>
+                        <TextBox IsEnabled="False"  Style="{StaticResource CustomTextBoxStyle}" x:Name="txt_email" BorderBrush="White" Foreground="White" Height="77" TextWrapping="Wrap" Width="456"  Background="{StaticResource yellowrange}" Padding="10 3 0 0" />
+                        <TextBlock  Margin="12 0 0 0" Foreground="White" Opacity="0.8" Text="country"></TextBlock>
+                        <TextBox IsEnabled="False"  Style="{StaticResource CustomTextBoxStyle}" x:Name="txt_countr" BorderBrush="White" Foreground="White" Height="77" TextWrapping="Wrap" Width="456"  Background="{StaticResource yellowrange}" Padding="10 3 0 0" />
+
+                    </StackPanel>
+                    <Button x:Name="btn_editdetails" VerticalAlignment="Bottom"  Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Edit Profile" Height="60"    Margin="12,10,12,12" Click="btn_editdetails_Click" MouseLeftButtonDown="btn_editdetails_MouseLeftButtonDown" />
+
+                </Grid>
+            </phone:PivotItem>
+
+
+            <phone:PivotItem CacheMode="{x:Null}" >
+                <phone:PivotItem.Header>
+                    <TextBlock Foreground="White" Text="high score"></TextBlock>
+                </phone:PivotItem.Header>
+                <Grid x:Name="highgrid" VerticalAlignment="Center" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="150"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel Visibility="Collapsed"  x:Name="btngrid" HorizontalAlignment="Stretch"  Orientation="Horizontal">
+                        <Grid  HorizontalAlignment="Stretch" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition ></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Load Previous" Height="60" HorizontalAlignment="Left"  x:Name="btnLoadPrev" VerticalAlignment="Center" Width="220"  Click="btnLoadPrevious_Click" Visibility="Collapsed"  Margin="0,0,12,0" />
+                            <Button Grid.Column="1" Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Load Next" Height="60" HorizontalAlignment="Right"  x:Name="btnLoadNext" VerticalAlignment="Center" Width="220"  Click="btnLoadNext_Click" Visibility="Collapsed"  />
+                        </Grid>
+                    </StackPanel>
+
+                    <ListBox Opacity="1.0" x:Name="lstScores" Margin="0,0,-12,0" ItemsSource="{Binding}" Grid.Row="1" HorizontalAlignment="Stretch" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,17">
+                                    <Grid>
+                                        <StackPanel Margin="12,0,0,0" Orientation="Vertical" HorizontalAlignment="Left">
+                                            <StackPanel Orientation="Horizontal"  >
+                                                <TextBlock FontSize="22"  Text="{Binding Rank}" TextWrapping="NoWrap" Foreground="White"  />
+                                                <TextBlock FontSize="22"  Text=". " Foreground="White" />
+                                                <TextBlock FontSize="22"  Text="{Binding User.Login}" TextWrapping="NoWrap" Foreground="White" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"  >
+                                                <TextBlock Text="Lifetime Score : "   HorizontalAlignment="Left"  FontSize="18"  TextWrapping="NoWrap" Margin="0,0,3,0" Foreground="White" />
+                                                <TextBlock Text="{Binding MinorResult}"   HorizontalAlignment="Left"  FontSize="18"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="{StaticResource yellowrange}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                            <TextBlock Text="{Binding Result}" VerticalAlignment="Center"  FontWeight="Bold" HorizontalAlignment="Right" FontSize="30"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="{StaticResource yellowrange}"/>
+                                            <TextBlock  HorizontalAlignment="Right" FontSize="24" VerticalAlignment="Center"   Text="pts" TextWrapping="NoWrap" Margin="0" Foreground="{StaticResource yellowrange}"/>
+
+                                        </StackPanel>
+                                    </Grid>
+
+                                    <Border Width="457" Height="1" Background="White" Margin="0,5" ></Border>
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <StackPanel   Orientation="Vertical" VerticalAlignment="Center"  x:Name="loadinghighscoreStack" HorizontalAlignment="Stretch"   >
+                        <Image Height="63" Width="158" Source="/img/loadingicon.png" Stretch="UniformToFill"/>
+                        <TextBlock x:Name="txt_loading" TextAlignment="Center" Foreground="White" Text="    loading scores ..." ></TextBlock>
+                        <Button Visibility="Collapsed"  Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Reload" Height="60"    x:Name="btnreload"  Width="220"   Margin="0,10,12,0" Click="btnreload_Click" ></Button>
+                    </StackPanel>
+
+                </Grid>
+
+            </phone:PivotItem>
+
+            <!--<phone:PivotItem CacheMode="{x:Null}" >
+                <phone:PivotItem.Header>
+                    <TextBlock Foreground="White" Text="koin power"></TextBlock>
+                </phone:PivotItem.Header>
+                <StackPanel Orientation="Vertical" >
+                    <Grid>
+                        <StackPanel Margin="12,0,0,0" Orientation="Vertical" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal"  >
+                                <TextBlock FontSize="22"  Text="{Binding Rank}" TextWrapping="NoWrap" Foreground="White"  />
+                                <TextBlock FontSize="22"  Text=". " Foreground="White" />
+                                <TextBlock FontSize="22"  Text="{Binding User.Login}" TextWrapping="NoWrap" Foreground="White" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"  >
+                                <TextBlock Text="All time : "   HorizontalAlignment="Left"  FontSize="18"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="White" />
+                                <TextBlock Text="{Binding MinorResult}"   HorizontalAlignment="Left"  FontSize="18"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="{StaticResource yellowrange}"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="{Binding Result}" VerticalAlignment="Center"  FontWeight="Bold" HorizontalAlignment="Right" FontSize="30"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="{StaticResource yellowrange}"/>
+                            <TextBlock  HorizontalAlignment="Right" FontSize="24" VerticalAlignment="Center"   Text="pts" TextWrapping="NoWrap" Margin="0" Foreground="{StaticResource yellowrange}"/>
+
+                        </StackPanel>
+                    </Grid>
+                    
+                </StackPanel>
+            </phone:PivotItem>-->
+
+            <phone:PivotItem CacheMode="{x:Null}" >
+                <phone:PivotItem.Header>
+                    <TextBlock Foreground="White" Text="koin power"></TextBlock>
+                </phone:PivotItem.Header>
+                <Grid x:Name="highgridKP" VerticalAlignment="Center" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel  Visibility="Collapsed"  x:Name="btngridkp" HorizontalAlignment="Stretch"  Orientation="Horizontal">
+                        <Grid HorizontalAlignment="Stretch" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition ></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Load Previous" Height="60" HorizontalAlignment="Left"  x:Name="btnLoadPrevKP" VerticalAlignment="Center" Width="220"  Click="btnLoadPrevious_ClickKP" Visibility="Collapsed"  Margin="0,0,12,0" />
+                            <Button Grid.Column="1" Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Load Next" Height="60" HorizontalAlignment="Right"  x:Name="btnLoadNextKP" VerticalAlignment="Center" Width="220"  Click="btnLoadNext_ClickKP" Visibility="Collapsed"  />
+                        </Grid>
+                    </StackPanel>
+
+                    <ListBox Opacity="1.0" x:Name="lstScoresKP" Margin="0,0,-12,0" ItemsSource="{Binding}" Grid.Row="1" HorizontalAlignment="Stretch" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,17">
+                                    <Grid>
+                                        <StackPanel Margin="12,0,0,0" Orientation="Vertical" HorizontalAlignment="Left">
+                                            <StackPanel Orientation="Horizontal"  >
+                                                <TextBlock FontSize="22"  Text="{Binding Rank}" TextWrapping="NoWrap" Foreground="White"  />
+                                                <TextBlock FontSize="22"  Text=". " Foreground="White" />
+                                                <TextBlock FontSize="22"  Text="{Binding User.Login}" TextWrapping="NoWrap" Foreground="White" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal"  >
+                                                <TextBlock Text="Play Time : "   HorizontalAlignment="Left"  FontSize="18"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="White" />
+                                                <TextBlock Text="{Binding MinorResult , Converter={StaticResource PlayTime}}"   HorizontalAlignment="Left"  FontSize="18"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="{StaticResource yellowrange}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                            <TextBlock Text="{Binding Result}" VerticalAlignment="Center"  FontWeight="Bold" HorizontalAlignment="Right" FontSize="30"  TextWrapping="NoWrap" Margin="0,0,10,0" Foreground="{StaticResource yellowrange}"/>
+                                            <TextBlock  HorizontalAlignment="Right" FontSize="18" VerticalAlignment="Center"   Text="koins" TextWrapping="NoWrap" Margin="0" Foreground="{StaticResource yellowrange}"/>
+
+                                        </StackPanel>
+                                    </Grid>
+
+                                    <Border Width="457" Height="1" Background="White" Margin="0,5" ></Border>
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <StackPanel   Orientation="Vertical" VerticalAlignment="Center"  x:Name="loadinghighscoreStackKP" HorizontalAlignment="Stretch"   >
+                        <Image Height="63" Width="158" Source="/img/loadingicon.png" Stretch="UniformToFill"/>
+                        <TextBlock x:Name="txt_loadingkp" TextAlignment="Center" Foreground="White" Text="    loading koin power ..." ></TextBlock>
+                        <Button Visibility="Collapsed"  Foreground="White" Background="{StaticResource yellowrange}" Style="{StaticResource CustomButtonStyle}" Content="Reload" Height="60"    x:Name="btnreloadKP"  Width="220"   Margin="0,10,12,0" Click="btnreload_ClickKP" ></Button>
+                    </StackPanel>
+
+                </Grid>
+
+            </phone:PivotItem>
+
+
+
+
+
+        </phone:Pivot>
+
+
+
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
+
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+
+    </Grid>
+</phone:PhoneApplicationPage>
